@@ -18,5 +18,67 @@ body
     outline: none;
 }
 
+.loading-title {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: lighter;
+    font-size: 45px;
+    color: #ffffff;
+    animation:signup-response 1.5s 1;
+    -webkit-animation:signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+
+    animation-delay:10s;
+    -webkit-animation-delay:7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards; 
+}
+.loading-loading {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #ffffff;
+    animation:signup-response 1.5s 1;
+    -webkit-animation:signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+
+    animation-delay:10s;
+    -webkit-animation-delay:7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards; 
+}
+
+@keyframes signup-response{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes signup-response{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+.loading-bar {
+    opacity: 75%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 5px;
+    background: #ffffff;
+    transform: scaleX(0.75);
+    transform-origin: top left ;
+    transition: transform 0.5s;
+    will-change: transform;
+}
+.loading-bar.ended {
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: transform 1.5s ease-in-out;
+}
+
 
 /*# sourceMappingURL=main.css.map*/
