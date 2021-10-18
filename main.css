@@ -112,7 +112,14 @@ body
     left: 0;
     outline: none;
 }
-
+@keyframes fadeIn {
+    99% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
 
 .loading-bar {
     opacity: 100%;
