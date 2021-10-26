@@ -14,13 +14,14 @@ body
     position: absolute;
     /*background-color: rgba(255, 255, 255, 0.5);*/
     text-align: center;
-    top: 8%;
+    top: 5%;
     left: 0%;
     width: 100%;
     height: 15%;
+    animation: blinker 2s linear infinite;
     
     font-family: 'Rubik beastly', sans-serif;
-    font-weight: lighter;
+    font-weight: 50;
     font-size: 115px;
 
     background: -webkit-linear-gradient(rgb(3, 11, 87), rgb(180, 240, 232));
@@ -57,6 +58,7 @@ h3{
     left: 30%;
     width: 40%;
     height: 50%;
+    animation: blinker 3s cubic-bezier(1, 0.8, 1, 0.7) infinite;
     
     background: -webkit-linear-gradient(rgb(79, 88, 172), rgb(180, 240, 232));
     -webkit-background-clip: text;
@@ -104,6 +106,7 @@ h3{
     transition: 500ms;
     
 }
+
 
 #refresh {
    
@@ -158,7 +161,7 @@ h3{
     left: 25%;
     width: 50%;
     height: 10px;
-    background: -webkit-linear-gradient(rgb(240, 205, 140), rgb(14, 11, 224));
+    background: -webkit-linear-gradient(rgb(240, 205, 140), rgb(79, 88, 172));
     transform: scaleX(0);
     transform-origin: top left ;
     /*transition: transform 0.5s;**/
@@ -184,6 +187,7 @@ h3{
     position: absolute;
     
     animation: blinker 2s linear infinite;
+    animation-duration: 10s linear;
     font-family: 'DotGothic16';
     font-size: 25px;
 
@@ -193,14 +197,14 @@ h3{
 
     
   }
-.blink_me.ended {
+.blink_me::after {
      visibility: hidden;
 }
 
 
   @keyframes blinker {
 50% {
-      opacity: 0;
+      opacity: 0.5;
     }
 
   }
