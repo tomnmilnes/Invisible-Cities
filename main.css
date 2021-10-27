@@ -134,7 +134,7 @@ a:hover {
     background: -webkit-linear-gradient(rgb(3, 11, 87), rgb(180, 240, 232));
     -webkit-background-clip: text, border;
     -webkit-text-fill-color: transparent;
-    animation: fadeIn 10s ;
+    animation: fadeIn 20s ;
     animation-fill-mode: forwards;
 }
 
