@@ -61,18 +61,44 @@ h3{
     font-family: 'DotGothic16';
     font-stretch: expanded;
     font-size: medium ;
-    font-weight: lighter;
-    
+    font-weight: lighter; 
+}
+h4{
+  top: 60%;
+  left: 45%;
+  position: absolute;
+  font-family: 'DotGothic16';
+  font-stretch: expanded;
+  font-size: large ;
+  font-weight: lighter; 
+  background: -webkit-linear-gradient(rgb(236, 145, 25), rgb(231, 222, 134));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blinker 2s linear infinite; 
+  
+}
+a:hover {
+  font-weight: 900;
+}
+.m-cont {
+  position: relative;
+  overflow: hidden !important;
+    top: 25%;
+    left: 27.5%;
+    width: 45%;
+    height: 30%;
 }
 #menuText{
     
     position: absolute;
     text-align: justify;
     top: 25%;
-    left: 30%;
-    width: 40%;
-    height: 50%;
-    animation: blinker 3s cubic-bezier(1, 0.8, 1, 0.7) infinite;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /*animation: blinker 3s cubic-bezier(1, 0.8, 1, 0.7) infinite;*/
+    animation: blinker 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+    animation: slide 60s linear infinite;
     
     background: -webkit-linear-gradient(rgb(79, 88, 172), rgb(180, 240, 232));
     -webkit-background-clip: text;
@@ -191,7 +217,7 @@ h3{
 
 .blink_me {
     
-    top: 78%;
+    top: 70%;
     left: 46%;
    border: solid 2px;
     text-align: center;
@@ -200,8 +226,10 @@ h3{
     border: none;
     position: absolute;
     
-    animation: blinker 2s linear infinite;
-    animation-duration: 10s linear;
+    
+    animation: loadblink 20s linear;
+    animation-fill-mode: forwards;
+
     font-family: 'DotGothic16';
     font-size: 25px;
 
@@ -211,16 +239,48 @@ h3{
 
     
   }
-.blink_me::after {
-     visibility: hidden;
-}
 
 
+  @keyframes loadblink {
+      10% {opacity: 0%;}
+      20% {opacity: 100%;}
+      30% {opacity: 0%;}
+      40% {opacity: 100%;}
+      50% {opacity: 0%;}
+      60% {opacity: 100%;}
+      70% {opacity: 0%;}
+      80%{opacity: 100%;}
+      90% {opacity: 0%;}
+      99% {opacity: 100%;}
+      100% {opacity: 0%;}
+
+      }
+  
   @keyframes blinker {
 50% {
       opacity: 0.5;
     }
 
   }
+
+  @keyframes slide {
+    0% {
+          top: 100%
+        }
+    100% {
+        top:-95%
+    }
+      }
+  @keyframes fade-out {
+        0% {
+              opacity: 100;
+            }
+        99% {
+            opacity: 100%;
+        }
+        100% {
+            opacity: 0%;
+        }
+      }
 
 /*# sourceMappingURL=main.css.map*/
