@@ -83,10 +83,10 @@ a:hover {
 .m-cont {
   position: relative;
   overflow: hidden !important;
-    top: 25%;
+    top: 22%;
     left: 27.5%;
     width: 45%;
-    height: 30%;
+    height: 35%;
 }
 #menuText{
     
@@ -117,7 +117,7 @@ a:hover {
 }
 
 #startButton {
-    
+   
     height: 50px;
     width: 10%;
     text-align: center;
@@ -134,7 +134,8 @@ a:hover {
     background: -webkit-linear-gradient(rgb(3, 11, 87), rgb(180, 240, 232));
     -webkit-background-clip: text, border;
     -webkit-text-fill-color: transparent;
-    
+    animation: fadeIn 10s ;
+    animation-fill-mode: forwards;
 }
 
 #startButton:hover {
@@ -165,10 +166,15 @@ a:hover {
     background: -webkit-linear-gradient(rgb(3, 11, 87), rgb(180, 240, 232));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
 
-   
-   
+    animation: fadeIn 20s ;
+    animation-fill-mode: forwards;
+}
+
+.gifs {
+
+  animation: fadeOut 30s;
+  animation-fill-mode: forwards;
 }
 #refresh:hover {
     -webkit-text-fill-color:whitesmoke;
@@ -185,14 +191,19 @@ a:hover {
     left: 0;
     outline: none;
 }
-/*@keyframes fadeIn {
-    99% {
-      visibility: hidden;
+
+@keyframes fadeIn {
+  0%   {
+    opacity: 0%;
+  }
+  
+  99% {
+      opacity: 0%;
     }
     100% {
-      visibility: visible;
+      opacity: 100%;
     }
-  }*/
+  }
 
 .loading-bar {
     opacity: 100%;
@@ -227,7 +238,7 @@ a:hover {
     position: absolute;
     
     
-    animation: loadblink 20s linear;
+    animation: loadblink 30s linear;
     animation-fill-mode: forwards;
 
     font-family: 'DotGothic16';
@@ -243,14 +254,24 @@ a:hover {
 
   @keyframes loadblink {
       10% {opacity: 0%;}
-      20% {opacity: 100%;}
+      15% {opacity: 100%;}
+      20% {opacity: 0%;}
+      25%{opacity: 100%;}
       30% {opacity: 0%;}
-      40% {opacity: 100%;}
+      35% {opacity: 1000%;}
+      40% {opacity: 0%;}
+      45% {opacity: 100%;}
       50% {opacity: 0%;}
-      60% {opacity: 100%;}
+      55% {opacity: 100%;}
+      60% {opacity: 0%;}
+      65% {opacity: 100%;}
       70% {opacity: 0%;}
-      80%{opacity: 100%;}
+      75% {opacity: 100%;}
+      80%{opacity: 0%;}
+      85%{opacity: 100%;}
       90% {opacity: 0%;}
+      95% {opacity: 100%;}
+      98% {opacity: 0%;}
       99% {opacity: 100%;}
       100% {opacity: 0%;}
 
@@ -271,7 +292,7 @@ a:hover {
         top:-95%
     }
       }
-  @keyframes fade-out {
+  @keyframes fadeOut {
         0% {
               opacity: 100;
             }
